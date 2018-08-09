@@ -33,15 +33,15 @@ class GamesController < OpenReadController
     end
   end
 
-  # DELETE /games/1
-  def destroy
-    @game.destroy
-  end
+  # # DELETE /games/1
+  # def destroy
+  #   @game.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game
-      @game = Game.find(params[:id])
+      @game = current_user.games.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
