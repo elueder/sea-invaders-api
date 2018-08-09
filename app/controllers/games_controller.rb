@@ -15,7 +15,7 @@ class GamesController < OpenReadController
 
   # POST /games
   def create
-    @game = Game.new(game_params)
+    @game = current_user.games.build(game_params)
 
     if @game.save
       render json: @game, status: :created, location: @game
@@ -46,6 +46,6 @@ class GamesController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def game_params
-      params.require(:game).permit(:score, :lives, :over)
+      params.require(:game).permit(:score, :lives, :over, :won)
     end
 end
