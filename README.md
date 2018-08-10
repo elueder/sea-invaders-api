@@ -7,8 +7,8 @@ This is an API for a single-player shooter game. It stores if the game is over, 
 - https://github.com/elueder/sea-invaders-client
 
 ## Game and API
-Game: https://elueder.github.io/sea-invaders-client/
-API: https://dashboard.heroku.com/apps/pure-forest-62868
+- Game: https://elueder.github.io/sea-invaders-client/
+- API: https://dashboard.heroku.com/apps/pure-forest-62868
 
 ## Technologies Used
 - Ruby
